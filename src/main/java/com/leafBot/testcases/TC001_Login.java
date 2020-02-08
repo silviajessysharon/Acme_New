@@ -19,7 +19,7 @@ public class TC001_Login extends ProjectSpecificMethods{
 	}
 
 	@Test(dataProvider = "fetchData")
-	public void createLeaf(String email, String password) {
+	public void createLeaf(String email, String password) throws InterruptedException {
 		new LoginPage(driver, node, test)
 		.enterUserName(email)
 		.enterPassword(password)
